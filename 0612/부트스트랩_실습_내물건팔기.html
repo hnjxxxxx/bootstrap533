@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩_실습_내물건팔기</title>
+  <!-- 부트스트랩 css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- 부트스트랩 js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 부트스트랩 아이콘 cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    /* 공통서식 */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+    body{
+      font-family:'Noto Sans KR', '맑은 고딕', arial, sans-serif;
+    }
+    a{color:#333; text-decoration: none;}
+    /* 헤더 서식 */
+    header, .bi-x-lg, header h2, header a{
+      position:fixed;
+      top:0px;
+      line-height:60px;
+    }
+    .bi-x-lg{left:10px;}
+    header h2{
+      left:50%;
+      transform:translate(-50%, 0px);
+      font-size:20px;
+    }
+    header a{right:10px;color:#ccc;}
+    header{
+      width:100%;
+      height:60px; 
+      border-bottom: 1px solid #ddd;
+      background-color: #fff;
+    }
+    /* 메인서식 */
+    main{margin:60px 0px 100px;}
+    section{width:calc(100% - 20px);margin:auto;}
+    form fieldset caption{display: none;}
+    label{font-weight: bold;}
+    #price_ch+label{font-weight: normal;}
+    .file_up{
+      width:70px;
+      height:70px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      color:#ccc;
+      text-align: center;
+      margin:20px 10px 10px;
+    }
+    .file_up i{
+      font-size:24px;
+      line-height: 45px;
+    }
+    .file_up span{
+      font-size:14px;
+      padding:0px 10px;
+      display: inline-block;
+      transform:translateY(-10px);
+    }
+    .location{padding:.375rem .75rem;}
+    .location i{float:right;}
+    /* 푸터서식 */
+    footer .btn{
+      width:calc(100% - 20px);
+      position: fixed;
+      left:50%;
+      bottom:10px;
+      transform:translateX(-50%);
+      height:60px;
+      color:#fff;
+      background-color: #f76c0f;
+      font-size:20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더영역 -->
+  <header>
+    <i class="bi bi-x-lg"></i>
+    <h2>내 물건 팔기</h2>
+    <a href="#none" title="임시저장">임시저장</a>
+  </header>
+  <!-- 메인콘텐츠영역 -->
+  <main>
+    <section>
+      <form name="" method="" action="">
+        <fieldset>
+          <div class="file_up mb-3">
+            <i class="bi bi-camera-fill"></i>
+            <span>0/10</span>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">제목</label>
+            <input type="text" placeholder="제목" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">거래 방식</label>
+            <div  class="mb-3">
+              <button type="button" class="btn btn-dark rounded-pill">판매하기</button>
+              <button type="button" class="btn btn-outline-secondary rounded-pill">나눔하기</button>
+            </div>
+            <input type="text" class="form-control" placeholder="가격을 입력해주세요.">
+            <div class="form-check form-text">
+              <input type="checkbox" id="price_ch" class="form-check-input">
+              <label for="price_ch" class="form-label">가격 제안 받기</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">자세한 설명</label>
+            <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="다산동에 올릴 게시글 내용을 작성해주세요.(판매 금지 물품은 게시가 제한될 수 있어요.)&#13;&#10;&#13;&#10;신뢰할 수 있는 거래를 위해 자세히 적어주세요.&#13;&#10;과학기술정보통신부, 한국 인터넷진흥원과 함께 해요."></textarea><br>
+            <button type="button" class="btn btn-light">자주 쓰는 문구</button>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">거래 희망 장소</label>
+            <a href="#none" title="위치추가">
+              <div class="border rounded-2 location">위치추가<i class="bi bi-chevron-right"></i></div>
+            </a>
+            <p class="form-text lh-lg">보여줄 동네 선택<i class="bi bi-chevron-right"></i></p>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <!-- 푸터영역 -->
+  <footer>
+    <input type="submit" class="btn" value="작성 완료">
+  </footer>
+</body>
+</html>
